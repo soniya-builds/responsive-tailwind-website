@@ -1,0 +1,21 @@
+{
+  "name": "responsive-tailwind-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soniya-builds/responsive-tailwind-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/soniya-builds/responsive-tailwind-website/issues"
+  },
+  "homepage": "https://github.com/soniya-builds/responsive-tailwind-website#readme"
+}
