@@ -20,5 +20,8 @@
   "homepage": "https://github.com/soniya-builds/responsive-tailwind-website#readme",
   "devDependencies": {
     "tailwindcss": "^4.3.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0"
   }
 }
