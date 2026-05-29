@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/soniya-builds/responsive-tailwind-website/issues"
   },
-  "homepage": "https://github.com/soniya-builds/responsive-tailwind-website#readme"
+  "homepage": "https://github.com/soniya-builds/responsive-tailwind-website#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.3.0"
+  }
 }
