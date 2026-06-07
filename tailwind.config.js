@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
+  content: ['./index.html'],
   theme: {
     extend: {
       colors: {
-        primary: "#ee0181",
-        sonu: "#01ee91",
+        'primary': '#3238f2',
       },
       fontFamily: {
-        display: ["Poppins", "sans-serif"],
-        body: ["Inter"],
-      },
+        'display': ['Poppins', 'sans-serif'],
+        'body': ['Inter', 'sans-serif']
+      }
     },
   },
   plugins: [],
