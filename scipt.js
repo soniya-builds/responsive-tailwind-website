@@ -1,6 +1,3 @@
-/* ─────────────────────────────────────────────────────────────────── */
-/* Advanced Custom Cursor                                               */
-/* ─────────────────────────────────────────────────────────────────── */
 const cursorDot = document.createElement('div');
 const cursorRing = document.createElement('div');
 cursorDot.className = 'cursor-dot';
