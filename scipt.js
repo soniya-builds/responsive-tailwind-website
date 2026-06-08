@@ -1,59 +1,54 @@
-const navDialog = document.getElementById('nav-dialog');
+const navDialog = document.getElementById("nav-dialog");
+
 function handleMenu() {
-    navDialog.classList.toggle('hidden');
+    navDialog.classList.toggle("hidden");
 }
 
-const initialTranslateLTR = -48*4;
-const initialTranslateRTL = 36*4;
+// Continuous scroll animation for app logos
+const line1 = document.getElementById("line1");
+const line2 = document.getElementById("line2");
+let translateX1 = -192;
+let translateX2 = -144;
+const speed = 0.5;
 
-function setupIntersectionObserver(element, isLTR, speed) {
-    const intersectionCallback = (entries) => {
-        const isIntersecting = entries[0].isIntersecting;
-        if(isIntersecting) {
-            window.addEventListener('scroll', scrollHandler);
-        } else {
-            window.removeEventListener('scroll', scrollHandler);
-        }
+function animateScroll() {
+    translateX1 -= speed;
+    translateX2 += speed;
+    
+    // Reset when scrolled too far
+    if (translateX1 < -600) {
+        translateX1 = 0;
     }
-    const intersectionObserver = new IntersectionObserver(intersectionCallback);
-
-    intersectionObserver.observe(element);
-
-    function scrollHandler() {
-        const translateX = (window.innerHeight - element.getBoundingClientRect().top) * speed;
-
-        let totalTranslate = 0;
-        if(isLTR) {
-            totalTranslate = translateX + initialTranslateLTR;
-        } else {
-            totalTranslate = -(translateX + initialTranslateRTL);
-        }
-
-        element.style.transform = `translateX(${totalTranslate}px)`;
+    if (translateX2 > 100) {
+        translateX2 = -200;
     }
-
+    
+    if (line1) line1.style.transform = `translateX(${translateX1}px)`;
+    if (line2) line2.style.transform = `translateX(${translateX2}px)`;
+    
+    requestAnimationFrame(animateScroll);
 }
 
-const line1 = document.getElementById('line1');
-const line2 = document.getElementById('line2');
-const line3 = document.getElementById('line3');
-const line4 = document.getElementById('line4');
+animateScroll();
 
+const dtElements = document.querySelectorAll("dt");
 
-setupIntersectionObserver(line1, true, 0.15);
-setupIntersectionObserver(line2, false, 0.15);
-setupIntersectionObserver(line3, true, 0.15);
+dtElements.forEach((element) => {
 
-setupIntersectionObserver(line4, true, 0.8);
+    element.addEventListener("click", () => {
 
-const dtElements = document.querySelectorAll('dt');
-dtElements.forEach(element => {
-    element.addEventListener('click', () => {
-        const ddId = element.getAttribute('aria-controls');
+        const ddId = element.getAttribute("aria-controls");
         const ddElement = document.getElementById(ddId);
-        const ddArrowIcon = element.querySelectorAll('i')[0];
+        const arrow = element.querySelector("i");
 
-        ddElement.classList.toggle('hidden');
-        ddArrowIcon.classList.toggle('-rotate-180');
-    })
-})
+        if (ddElement) {
+            ddElement.classList.toggle("hidden");
+        }
+
+        if (arrow) {
+            arrow.classList.toggle("-rotate-180");
+        }
+
+    });
+
+});
