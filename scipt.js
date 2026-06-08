@@ -37,9 +37,7 @@ function animateCursor() {
 }
 animateCursor();
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Navbar Scroll Effect with Transition                                */
-/* ─────────────────────────────────────────────────────────────────── */
+
 const nav = document.querySelector('nav');
 let lastScrollY = 0;
 
@@ -49,18 +47,14 @@ window.addEventListener('scroll', () => {
     lastScrollY = currentScrollY;
 });
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Mobile Menu Toggle                                                   */
-/* ─────────────────────────────────────────────────────────────────── */
+
 const navDialog = document.getElementById('nav-dialog');
 function handleMenu() {
     navDialog.classList.toggle('hidden');
     document.body.style.overflow = navDialog.classList.contains('hidden') ? '' : 'hidden';
 }
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Intersection Observer for Scroll Reveal                             */
-/* ─────────────────────────────────────────────────────────────────── */
+
 const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -75,18 +69,14 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Stagger Children Animation                                           */
-/* ─────────────────────────────────────────────────────────────────── */
+
 document.querySelectorAll('[data-stagger]').forEach(parent => {
     Array.from(parent.children).forEach((child, i) => {
         child.style.animationDelay = (i * 100) + 'ms';
     });
 });
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* FAQ Accordion with Smooth Animation                                 */
-/* ─────────────────────────────────────────────────────────────────── */
+
 document.querySelectorAll('dt').forEach(dt => {
     dt.classList.add('interactive');
     dt.addEventListener('click', () => {
@@ -112,9 +102,7 @@ document.querySelectorAll('dt').forEach(dt => {
     });
 });
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* 3D Tilt Effect on Gradient Cards                                   */
-/* ─────────────────────────────────────────────────────────────────── */
+
 document.querySelectorAll('.gradient-hover-outer').forEach(card => {
     card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
@@ -137,9 +125,6 @@ document.querySelectorAll('.gradient-hover-outer').forEach(card => {
     });
 });
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Animated Number Counter                                              */
-/* ─────────────────────────────────────────────────────────────────── */
 function animateCounter(el) {
     const target = parseInt(el.dataset.target);
     const duration = 2000;
@@ -173,9 +158,7 @@ const counterObserver = new IntersectionObserver(entries => {
 
 document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Hero Blob Parallax                                                   */
-/* ─────────────────────────────────────────────────────────────────── */
+
 const blob = document.querySelector('.hero-blob');
 if (blob) {
     window.addEventListener('mousemove', e => {
@@ -190,9 +173,7 @@ if (blob) {
     });
 }
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Parallax Scroll Effect                                               */
-/* ─────────────────────────────────────────────────────────────────── */
+
 const parallaxElements = document.querySelectorAll('[data-parallax]');
 if (parallaxElements.length > 0) {
     window.addEventListener('scroll', () => {
@@ -204,9 +185,7 @@ if (parallaxElements.length > 0) {
     });
 }
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Add Click Ripple Effect                                              */
-/* ─────────────────────────────────────────────────────────────────── */
+
 document.querySelectorAll('button, a').forEach(element => {
     element.addEventListener('click', function(e) {
         const ripple = document.createElement('span');
@@ -245,9 +224,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-/* ─────────────────────────────────────────────────────────────────── */
-/* Page Load Animation                                                  */
-/* ─────────────────────────────────────────────────────────────────── */
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
     document.querySelectorAll('[data-fade-in]').forEach(el => {
