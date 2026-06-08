@@ -162,15 +162,17 @@
         </div>
 
         <!-- Steps Section -->
-        <div id="steps" class="flex flex-col gap-8 container mt-32">
-            <div class="reveal">
-                <h2 class="text-5xl font-bold mb-16">
-                    How it
-                    <span style="background: linear-gradient(135deg, #8b5cf6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">works</span>
-                </h2>
-            </div>
+        <div id="steps" class="py-20 lg:py-32 relative">
+            <div class="container mx-auto px-6">
+                <div class="reveal mb-20 text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        How it
+                        <span style="background: linear-gradient(135deg, #8b5cf6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">works</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Follow these simple steps to transform your web app into a desktop application</p>
+                </div>
 
-            <div class="step-card rounded-2xl px-8 py-12 flex flex-col lg:flex-row justify-between reveal-left">
+                <div class="space-y-12 mt-16">
                 <span class="step-number">01</span>
                 <div class="flex flex-col gap-6 lg:w-1/2 relative z-10">
                     <span class="glass-card w-fit px-4 py-2 text-sm font-semibold tracking-wider text-purple-700">Step 1</span>
@@ -188,7 +190,7 @@
                 <div class="pt-12 relative z-10"><img src="./assets/asset 66.svg" class="float-img" alt="" style="max-width:300px;"></div>
             </div>
 
-            <div class="step-card rounded-2xl px-8 py-12 flex flex-col lg:flex-row justify-between reveal">
+                <div class="step-card rounded-2xl px-8 py-12 flex flex-col lg:flex-row justify-between gap-12 items-center reveal">
                 <span class="step-number">02</span>
                 <div class="flex flex-col gap-6 lg:w-1/2 relative z-10">
                     <span class="glass-card w-fit px-4 py-2 text-sm font-semibold tracking-wider text-purple-700">Step 2</span>
@@ -206,7 +208,7 @@
                 <div class="pt-12 relative z-10"><img src="./assets/asset 66.svg" class="float-img" alt="" style="max-width:300px; animation-delay: 1s;"></div>
             </div>
 
-            <div class="step-card rounded-2xl px-8 py-12 flex flex-col lg:flex-row justify-between reveal-right">
+                <div class="step-card rounded-2xl px-8 py-12 flex flex-col lg:flex-row justify-between gap-12 items-center reveal-right">
                 <span class="step-number">03</span>
                 <div class="flex flex-col gap-6 lg:w-1/2 relative z-10">
                     <span class="glass-card w-fit px-4 py-2 text-sm font-semibold tracking-wider text-purple-700">Step 3</span>
@@ -226,16 +228,18 @@
         </div>
 
         <!-- Pricing Section -->
-        <div id="pricing" class="container mt-32">
-            <div class="reveal mb-16">
-                <h2 class="h2-style font-bold">
-                    Choose a plan that
-                    <span style="background: linear-gradient(135deg, #8b5cf6, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">fits your needs</span>
-                </h2>
-            </div>
+        <div id="pricing" class="py-20 lg:py-32 bg-white/40 backdrop-blur-sm">
+            <div class="container mx-auto px-6">
+                <div class="reveal mb-20 text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                        Choose a plan that
+                        <span style="background: linear-gradient(135deg, #8b5cf6, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">fits your needs</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Flexible pricing plans for every stage of your journey</p>
+                </div>
 
-            <div class="flex flex-col lg:flex-row gap-6 mt-10" data-stagger>
-                <div class="pricing-card flex-1 rounded-2xl px-8 pt-12 pb-8 flex flex-col gap-6">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16" data-stagger>
+                <div class="pricing-card rounded-2xl px-8 pt-12 pb-8 flex flex-col gap-6">
                     <h3 class="text-4xl font-bold">Free</h3>
                     <p class="text-lg font-light text-gray-600">For personal testing</p>
                     <p class="text-5xl font-bold font-display">$0<span class="text-lg font-light text-gray-500">/month</span></p>
@@ -249,7 +253,7 @@
                     <button class="glass-card px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all mt-auto">Get Started</button>
                 </div>
 
-                <div class="pricing-card flex-1 rounded-2xl px-8 pt-12 pb-8 flex flex-col gap-6">
+                <div class="pricing-card rounded-2xl px-8 pt-12 pb-8 flex flex-col gap-6">
                     <h3 class="text-4xl font-bold">Professional</h3>
                     <p class="text-lg font-light text-gray-600">For shipping to customers</p>
                     <p class="text-5xl font-bold font-display">$249<span class="text-lg font-light text-gray-500">/month</span></p>
@@ -263,7 +267,7 @@
                     <button class="btn-primary px-8 py-3 rounded-xl font-semibold text-white transition-all mt-auto">Start Free Trial</button>
                 </div>
 
-                <div class="pricing-card featured flex-1 rounded-2xl px-8 pt-12 pb-8 flex flex-col gap-6 relative">
+                <div class="pricing-card featured rounded-2xl px-8 pt-12 pb-8 flex flex-col gap-6 relative">
                     <div class="glass-card absolute top-0 right-8 -translate-y-1/2 px-4 py-2 text-sm font-bold text-purple-700">Most Popular</div>
                     <h3 class="text-4xl font-bold">Enterprise</h3>
                     <p class="text-lg font-light text-gray-600">For advanced needs</p>
@@ -280,16 +284,18 @@
             </div>
         </div>
 
-        <!-- CTA Section -->
-        <div id="faq" class="container mt-32">
-            <div class="reveal mb-16">
-                <h2 class="h2-style font-bold">
-                    Frequently asked
-                    <span style="background: linear-gradient(135deg, #8b5cf6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">questions</span>
-                </h2>
-            </div>
+        <!-- FAQ Section -->
+        <div id="faq" class="py-20 lg:py-32">
+            <div class="container mx-auto px-6">
+                <div class="reveal mb-20 text-center">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                        Frequently asked
+                        <span style="background: linear-gradient(135deg, #8b5cf6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">questions</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Find answers to common questions about ToDesktop</p>
+                </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10" data-stagger>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-16 max-w-4xl mx-auto" data-stagger>
                 <div class="faq-item rounded-2xl p-6 cursor-pointer">
                     <dt class="flex justify-between items-center group">
                         <p class="font-semibold text-lg group-hover:text-purple-600 transition-colors">Is ToDesktop For Me?</p>
@@ -336,7 +342,9 @@
         </div>
 
         <!-- CTA Section -->
-        <div class="cta-section rounded-3xl mt-32 mb-24 flex flex-col lg:flex-row p-8 lg:p-12 reveal">
+        <div class="py-20 lg:py-32 bg-gradient-to-b from-transparent via-purple-50/30 to-transparent">
+            <div class="container mx-auto px-6">
+                <div class="cta-section rounded-3xl px-8 lg:px-12 py-12 lg:py-16 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-between reveal">
             <div class="flex flex-col gap-6 lg:flex-1 relative z-10">
                 <p class="text-purple-300 font-display font-bold tracking-widest text-sm">READY TO LAUNCH?</p>
                 <h2 class="text-4xl lg:text-5xl text-white font-bold leading-tight">
@@ -356,25 +364,18 @@
         </div>
     </main>
 
-    <!--FOOTER-->
-    <footer class="container pt-20 border-t border-gray-200">
-        <div class="flex flex-col lg:flex-row gap-12 mb-12">
-            <a href="#" class="flex gap-2 items-center group">
-                <img class="max-w-12 max-h-12 group-hover:scale-110 transition-transform duration-300" src="./assets/asset 0.png" alt="Logo">
-                <span class="text-lg font-semibold font-display">ToDesktop</span>
-            </a>
-            <div class="flex gap-12 text-gray-600">
-                <a href="#" class="hover:text-purple-600 transition-colors duration-300">Documentation</a>
-                <a href="#" class="hover:text-purple-600 transition-colors duration-300">GitHub</a>
-                <a href="#" class="hover:text-purple-600 transition-colors duration-300">Twitter</a>
+    <footer class="py-12 lg:py-16 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center gap-8 lg:gap-12 mb-8 text-gray-600 flex-wrap">
+                <a href="#" class="hover:text-purple-600 transition-colors">Documentation</a>
+                <a href="#" class="hover:text-purple-600 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-purple-600 transition-colors">Twitter</a>
+                <a href="#" class="flex items-center gap-2 hover:text-purple-600 transition-colors">
+                    <i class="fa-solid fa-star"></i>
+                    <span>Y Combinator Backed</span>
+                </a>
             </div>
-        </div>
-        <div class="flex flex-col gap-4 items-center justify-center py-8 border-t border-gray-200">
-            <div class="flex gap-2 items-center text-sm text-gray-600">
-                <i class="fa-solid fa-star text-purple-600"></i>
-                <p>Y Combinator Backed</p>
-            </div>
-            <p class="text-sm text-gray-500">© 2024 ToDesktop. All rights reserved.</p>
+            <p class="text-gray-600">© 2024 ToDesktop. All rights reserved.</p>
         </div>
     </footer>
 
