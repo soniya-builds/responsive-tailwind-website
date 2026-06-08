@@ -10,9 +10,9 @@ function setupIntersectionObserver(element, isLTR, speed) {
     const intersectionCallback = (entries) => {
         const isIntersecting = entries[0].isIntersecting;
         if(isIntersecting) {
-            document.addEventListener('scroll', scrollHandler);
+            window.addEventListener('scroll', scrollHandler);
         } else {
-            document.removeEventListener('scroll', scrollHandler);
+            window.removeEventListener('scroll', scrollHandler);
         }
     }
     const intersectionObserver = new IntersectionObserver(intersectionCallback);
